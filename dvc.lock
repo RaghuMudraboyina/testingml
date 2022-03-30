@@ -16,3 +16,19 @@ stages:
     - path: data/raw/opex.csv
       md5: 0dd1020e6c99a5f657e89de1a9827127
       size: 162450
+  split_data:
+    cmd: python src/split_data.py --config=params.yaml
+    deps:
+    - path: data/raw/opex.csv
+      md5: 0dd1020e6c99a5f657e89de1a9827127
+      size: 162450
+    - path: src/split_data.py
+      md5: 71f9d14002e9ee8def243e3bdb841864
+      size: 1050
+    outs:
+    - path: data/processed/opextest.csv
+      md5: d044f2f68b896a203c7b76e6e714cd07
+      size: 32683
+    - path: data/processed/opextrain.csv
+      md5: 6e2e77ec147473db462b7f64edd88c3f
+      size: 129737
