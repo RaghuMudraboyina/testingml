@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=params.yaml
+    deps:
+    - path: data_given/opex.csv
+      md5: c7aac1053fa648e31ee3a37f2a7f4159
+      size: 161700
+    - path: src/get_data.py
+      md5: e921dd7d513e12e15ff032c5ba2bb5cd
+      size: 669
+    - path: src/load_data.py
+      md5: 47fa21195fc420bcd06ca041251944b8
+      size: 779
+    outs:
+    - path: data/raw/opex.csv
+      md5: 0dd1020e6c99a5f657e89de1a9827127
+      size: 162450

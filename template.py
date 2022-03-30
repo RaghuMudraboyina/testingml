@@ -18,8 +18,8 @@ for dir_ in dirs:
         pass
 #.gitignore will ignore the files which we we dont to push .we need to create _int__ file just to make package
 files = [
-    "dvc.yml",
-    "params.yml",
+    "dvc.yaml",
+    "params.yaml",
     ".gitignore",
    os.path.join("src","__init__.py")
 ]

@@ -4,7 +4,7 @@ stages:
     cmd: python src/load_data.py --config=params.yaml
     deps:
       - src/get_data.py
-      - src.load_data.py
+      - src/load_data.py
       - data_given/opex.csv
     outs:
       - data/raw/opex.csv
